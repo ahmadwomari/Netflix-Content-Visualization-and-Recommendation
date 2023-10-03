@@ -137,4 +137,4 @@ The recommendation system is deployed as a user-friendly web page using Flask, H
 
 ## License
 
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
+This project is released under the [MIT License](LICENSE), allowing you to use, modify, and distribute it as per the terms of the license.
