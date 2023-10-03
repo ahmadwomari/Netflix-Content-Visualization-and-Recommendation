@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Netflix Recommendation</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+    
+    <body>
+        <h1>Netflix Recommendation</h1>    
+        <form method="POST" action="/">
+            <label for="title">Enter The Title</label>
+            <input type="text" name="title" id="title" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Director</th>
+                    <th>Country</th>
+                    <th>Release Year</th>
+                    <th>Duration</th>
+                    <th>Target Ages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recommendation in recommendations %}
+                <tr>
+                    <td>{{ recommendation['title'] }}</td>
+                    <td>{{ recommendation['type'] }}</td>
+                    <td>{{ recommendation['director'] }}</td>
+                    <td>{{ recommendation['country'] }}</td>
+                    <td>{{ recommendation['release_year'] }}</td>
+                    <td>{{ recommendation['duration'] }}</td>
+                    <td>{{ recommendation['target_ages'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
